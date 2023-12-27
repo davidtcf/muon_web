@@ -11,7 +11,7 @@ return{
         )
     ),
 --Environment--
-  s("ev",{t("\\input{~/Latex-Envi/theorems.tex}")}),
+  s("ev",{t("\\input{~/.config/nvim/Latex-Envi/theorems.tex}")}),
 
 --Structure--  
   s("se", fmt([[\section{<>}]],{i(1)},{delimiters="<>"})),
