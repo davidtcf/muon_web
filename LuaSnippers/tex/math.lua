@@ -10,21 +10,25 @@ s("omig",{t("\\omega")}),
 s("epsi",{t("\\vareepsilon")}),
 s("labda",{t("\\lambda")}),
 s("phi",{t("\\phi")}),
-s("rho",{t("\\rho")}),
+s("ro",{t("\\rho")}),
 s("realnum",{t("\\mathbb{R}")}),
 s("integer",{t("\\mathbb{Z}")}),
 s("rationalnum",{t("\\mathbb{Q}")}),
+s("ne",{t("\\nebla")}),
+s("epz",{t("\\epsilon_0")}),
 
 --Calculus--
-s("int",{t("\\int")}),
-s("dint",{t("\\iint")}),
-s("trint",{t("\\iiint")}),
+s("int", fmt([[\int_{<>}^{<>} ]],{i(1),i(2)},{delimiters="<>"})),
+s("dint", fmt([[\iint_{<>}^{<>} ]],{i(1),i(2)},{delimiters="<>"})),
+s("tint", fmt([[\iiint_{<>}^{<>} ]],{i(1),i(2)},{delimiters="<>"})),
 s("fprime",{t("\\f'")}),
 s("lim", fmt([[\lim_{ <> \to <>}]],{i(1),i(2)},{delimiters="<>"})),
 s("sum", fmt([[\sum_{n=<>}^{<>}a_n]],{i(1),i(2)},{delimiters="<>"})),
 s("de", fmt([[\frac{d<>}{d<>}]],{i(1),i(2)},{delimiters="<>"})),
-s("pd", fmt([[\frac{\partial<>}{\partial<>}]],{i(1),i(2)},{delimiters="<>"})),
-  
+s("pd", fmt([[\frac{\partial <>}{\partial <>}]],{i(1),i(2)},{delimiters="<>"})),
+s("pdv", fmt([[\frac{\partial Vec{<>}}{\partial Vec{<>}}]],{i(1),i(2)},{delimiters="<>"})),
+s("curl", fmt([[\nabla\times \Vec{<>} ]],{i(1)},{delimiters="<>"})),
+s("div", fmt([[\nabla\cdot \Vec{<>} ]],{i(1)},{delimiters="<>"})),
 --Logic--
 s("and",{t("\\land")}),
 s("or",{t("\\lor")}),
@@ -47,6 +51,10 @@ s("le",{t("\\le")}),
 s("ge",{t("\\ge")}),
 s("aprox",{t("\\approx")}),
 s("inf",{t("\\infty")}),
+s("fr", fmt([[\frac{<>}{<>} ]],{i(1),i(2)},{delimiters="<>"})),
+s("dot",{t("\\cdot")}),
+s("cros",{t("\\times")}),
+
 
 --Linear Algebra--
 s("ve", fmt([[\vec{<>}]],{i(1)},{delimiters="<>"})),
@@ -68,16 +76,24 @@ s("thm", fmt([[\thmr{<>}{
 
 s("lem", fmt([[\lem{<>}{
     <>
+}
 ]],{i(1),i(2)},{delimiters="<>"})),
 
-s("cor", fmt([[\cor{<>}{
+s("pf", fmt([[\pf{<>}]],{i(1)},{delimiters="<>"})),
+
+s("ap", fmt([[\approxi{<>}]],{i(1)},{delimiters="<>"})),
+
+s("dr", fmt([[\dr{<>}]],{i(1)},{delimiters="<>"})),
+
+s("rm", fmt([[\remark{<>}{
   <>
 }
 ]],{i(1),i(2)},{delimiters="<>"})),
 
-s("pop", fmt([[\prop{<>}{
-    <>
-  }
-  ]],{i(1),i(2)},{delimiters="<>"}))
+s("ex", fmt([[\example{<>}{
+  <>
+}
+]],{i(1),i(2)},{delimiters="<>"}))
+
 }
 

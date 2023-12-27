@@ -10,6 +10,12 @@ return{
         {delimiters = "<>"}
         )
     ),
+
+  s("m", fmt([[$<>$]],{i(1)},{delimiters="<>"})),
+
+s("cen", fmt([[\begin{center}
+    <>
+\end{center}]],{i(1)},{delimiters="<>"})),
 --Environment--
   s("ev",{t("\\input{~/.config/nvim/Latex-Envi/theorems.tex}")}),
 
@@ -19,8 +25,8 @@ return{
   s("sse", fmt([[\subsection{<>}]],{i(1)},{delimiters="<>"})),
   s("ssse", fmt([[\subsubsection{<>}]],{i(1)},{delimiters="<>"})),
   s("pa", fmt([[\paragraph{<>}]],{i(1)},{delimiters="<>"})),
-  s("spa", fmt([[\subparagraph{<>}]],{i(1)},{delimiters="<>"}))
-
+  s("spa", fmt([[\subparagraph{<>}]],{i(1)},{delimiters="<>"})),
+  s("cet",{t("\\centering")})
 
 
 
