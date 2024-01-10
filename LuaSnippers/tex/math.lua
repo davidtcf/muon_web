@@ -60,37 +60,45 @@ s("cros",{t("\\times")}),
 s("ve", fmt([[\vec{<>}]],{i(1)},{delimiters="<>"})),
 s("nor", fmt([[||<>||]],{i(1)},{delimiters="<>"})),
 s("de", fmt([[\det(<>)]],{i(1)},{delimiters="<>"})),
-s("tr", fmt([[\operatorname{tr}(<>)]],{i(1)},{delimiters="<>"})),
+s("tr", fmt([[\operatorname{trace}(<>)]],{i(1)},{delimiters="<>"})),
 s("dim", fmt([[\dim<>]],{i(1)},{delimiters="<>"})),
 
---Structure--
-s("def", fmt([[\defn{<>}{
+
+
+
+--Math Structure--
+s("def", fmt([[
+\defn{<>}{
       <>
   }
   ]],{i(1),i(2)},{delimiters="<>"})),
 
-s("thm", fmt([[\thmr{<>}{
+s("thm", fmt([[
+\thmr{<>}{
   <>
 }
 ]],{i(1),i(2)},{delimiters="<>"})),
 
-s("lem", fmt([[\lem{<>}{
+s("lem", fmt([[
+\lem{<>}{
     <>
 }
 ]],{i(1),i(2)},{delimiters="<>"})),
 
-s("pf", fmt([[\pf{<>}]],{i(1)},{delimiters="<>"})),
+s("pf", fmt([[\pf{<>}]],{i(1)},{delimiters="<>"})),--Proof--
 
-s("ap", fmt([[\approxi{<>}]],{i(1)},{delimiters="<>"})),
+s("ap", fmt([[\approxi{<>}]],{i(1)},{delimiters="<>"})),--Approximation--
 
-s("dr", fmt([[\dr{<>}]],{i(1)},{delimiters="<>"})),
+s("der", fmt([[\dr{<>}]],{i(1)},{delimiters="<>"})), --derivation--
 
-s("rm", fmt([[\remark{<>}{
+s("rm", fmt([[
+\remark{<>}{
   <>
 }
 ]],{i(1),i(2)},{delimiters="<>"})),
 
-s("ex", fmt([[\example{<>}{
+s("ex", fmt([[
+\example{<>}{
   <>
 }
 ]],{i(1),i(2)},{delimiters="<>"}))
