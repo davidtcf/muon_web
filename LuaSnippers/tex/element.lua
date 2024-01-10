@@ -9,9 +9,9 @@ s("para", fmt([[\paragraph{<>}]],{i(1)},{delimiters="<>"})),
 s("spara", fmt([[\subparagraph{<>}]],{i(1)},{delimiters="<>"})),
 
 --Content--
-s("tfcont",{t("\\tableofcontents")}),
+s("content",{t("\\tableofcontents")}),
 
---Appendix--
+--Structure of Passage文章结构--
 s("appen",{t("\\appendix")}),
 s("frontmatter",{t("\\frontmatter")}),
 s("mainmatter",{t("\\mainmatter")}),
