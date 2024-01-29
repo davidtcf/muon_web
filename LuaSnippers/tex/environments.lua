@@ -3,7 +3,7 @@ return{
 
   s("ev", fmt([[
   \documentclass{<>}
-  \input{~/.config/nvim/Latex-Envi/theorems.tex}
+  \input{~/Latex-Setting/theorems.tex}
   \begin{document}
 
   <>
