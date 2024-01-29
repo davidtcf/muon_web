@@ -16,6 +16,21 @@ s("integer",{t("\\mathbb{Z}")}),
 s("rationalnum",{t("\\mathbb{Q}")}),
 s("ne",{t("\\nebla")}),
 s("epz",{t("\\epsilon_0")}),
+s("lo",{t("\\mathscr{L}")}),
+s("la",{t("\\Laplace ")}),
+
+
+
+
+--Math Equations--
+s("ma", fmt([[$<>$]],{i(1)},{delimiters="<>"})),
+s("eq", fmt([[
+\begin{equation}
+  <>
+\end{equation}
+
+]],{i(1)},{delimiters="<>"})),
+
 
 --Calculus--
 s("int", fmt([[\int_{<>}^{<>} ]],{i(1),i(2)},{delimiters="<>"})),
@@ -54,7 +69,7 @@ s("inf",{t("\\infty")}),
 s("fr", fmt([[\frac{<>}{<>} ]],{i(1),i(2)},{delimiters="<>"})),
 s("dot",{t("\\cdot")}),
 s("cros",{t("\\times")}),
-
+s("sb", fmt([[_{<>}]],{i(1)},{delimiters="<>"})),
 
 --Linear Algebra--
 s("ve", fmt([[\vec{<>}]],{i(1)},{delimiters="<>"})),

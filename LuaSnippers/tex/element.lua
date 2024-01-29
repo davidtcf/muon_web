@@ -24,6 +24,10 @@ s("title", fmt([[\title{<>}
 \maketitle
 ]],{i(1),i(2),i(3)},{delimiters="<>"})),
 
+--New Page--
+s("np",{t("\\newpage")}),
+
+
 --Cross Referencing交叉引用--
 s("ref", fmt([[\ref{<>}]],{i(1)},{delimiters="<>"})),
 s("pref", fmt([[\pageref{<>}]],{i(1)},{delimiters="<>"})),
@@ -45,7 +49,7 @@ s("itemize", fmt([[
   <>
 \end{itemize}]],{i(1),i(2)},{delimiters="<>"})),
 
-s("item",{t("\\item ")}),
+s("itm",{t("\\item ")}),
 
 
 --Formatting Environment对齐环境--
@@ -90,14 +94,5 @@ s("code", fmt([[
 
 --Change Line--
 s("nl",{t([[\\]])}),
-
-
-
-
-
-
-
-
-
 
 }

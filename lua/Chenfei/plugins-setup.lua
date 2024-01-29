@@ -66,6 +66,13 @@ return packer.startup(function(use)
   
   -- vimtex (LaTex)
   use("lervag/vimtex")
+ 
+  -- vim-markdown
+  use("godlygeek/tabular")
+  use("preservim/vim-markdown")
+
+  -- markdown Preview
+  use("iamcco/markdown-preview.nvim")
 
   -- snippets
   use({
