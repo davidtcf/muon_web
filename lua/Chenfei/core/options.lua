@@ -27,4 +27,5 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
-
+--set wrap text
+opt.wrap = true

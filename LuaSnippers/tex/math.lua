@@ -89,7 +89,7 @@ s("def", fmt([[
   ]],{i(1),i(2)},{delimiters="<>"})),
 
 s("thm", fmt([[
-\thmr{<>}{
+\thm{<>}{
   <>
 }
 ]],{i(1),i(2)},{delimiters="<>"})),

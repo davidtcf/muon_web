@@ -66,13 +66,28 @@ return packer.startup(function(use)
   
   -- vimtex (LaTex)
   use("lervag/vimtex")
- 
+
+  -- vim-quick_run
+  use("thinca/vim-quickrun")
+
+  -- vim-wiki
+  use("vimwiki/vimwiki")
+
   -- vim-markdown
   use("godlygeek/tabular")
   use("preservim/vim-markdown")
 
+  -- Dim paragraph above or below the cursor
+  use("junegunn/limelight.vim")
+
+  -- Go to focus mode in nvim
+  use("junegunn/goyo.vim")
+
   -- markdown Preview
-  use("iamcco/markdown-preview.nvim")
+  use {'iamcco/markdown-preview.nvim'}
+
+  -- friendly-snippets
+  use {'rafamadriz/friendly-snippets'}
 
   -- snippets
   use({
@@ -80,8 +95,12 @@ return packer.startup(function(use)
 	-- follow latest release.
 	tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 	-- install jsregexp (optional!:).
-	run = "make install_jsregexp"
+	run = "make install_jsregexp",
+  -- friendly-snippets
+  dependencies = {"rafamadriz/friendly-snippets"}
   })
+
+  require("luasnip.loaders.from_vscode").lazy_load()
 
   -- managing & installing lsp servers, linters & formatters
   use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
@@ -91,7 +110,7 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig") -- easily configure language servers
   use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
   use({
-    "glepnir/lspsaga.nvim",
+    "nvimdev/lspsaga.nvim",
     branch = "main",
     requires = {
       { "nvim-tree/nvim-web-devicons" },
@@ -115,6 +134,7 @@ return packer.startup(function(use)
       ts_update()
     end,
   })
+
 
   -- auto closing
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
