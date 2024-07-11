@@ -83,6 +83,9 @@ return packer.startup(function(use)
   -- Go to focus mode in nvim
   use("junegunn/goyo.vim")
 
+  -- LeetCode Vim Plugin
+  use("ianding1/leetcode.vim")
+
   -- markdown Preview
   use {'iamcco/markdown-preview.nvim'}
 
@@ -134,7 +137,8 @@ return packer.startup(function(use)
       ts_update()
     end,
   })
-
+  -- treesitter configurations
+  use('nvim-treesitter/nvim-treesitter')
 
   -- auto closing
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
