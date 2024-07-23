@@ -55,6 +55,9 @@ return packer.startup(function(use)
   -- statusline
   use("nvim-lualine/lualine.nvim")
 
+  -- onedark
+  use("navarasu/onedark.nvim")
+
   -- fuzzy finding w/ telescope
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
@@ -69,9 +72,6 @@ return packer.startup(function(use)
 
   -- vim-quick_run
   use("thinca/vim-quickrun")
-
-  -- vim-wiki
-  use("vimwiki/vimwiki")
 
   -- vim-markdown
   use("godlygeek/tabular")
